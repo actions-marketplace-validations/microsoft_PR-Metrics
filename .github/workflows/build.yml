@@ -180,7 +180,7 @@ jobs:
           config_file: .github/linters/.linkspector.yml
 
       - name: Initialize
-        uses: github/codeql-action/init@e296a935590eb16afc0c0108289f68c87e2a89a5 # v3.29.5
+        uses: github/codeql-action/init@fdbfb4d2750291e159f0156def62b853c2798ca2 # v3.29.5
         with:
           build-mode: none
           config-file: .github/linters/codeql.yml
@@ -188,7 +188,7 @@ jobs:
           queries: security-extended,security-and-quality
 
       - name: Analyze
-        uses: github/codeql-action/analyze@e296a935590eb16afc0c0108289f68c87e2a89a5 # v3.29.5
+        uses: github/codeql-action/analyze@fdbfb4d2750291e159f0156def62b853c2798ca2 # v3.29.5
         with:
           category: TypeScript
 
