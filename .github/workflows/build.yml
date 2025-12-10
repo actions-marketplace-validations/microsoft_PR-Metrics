@@ -160,7 +160,7 @@ jobs:
       - name: Validate Markdown Links (Attempt 1)
         id: linkspector-1
         continue-on-error: true
-        uses: umbrelladocs/action-linkspector@874d01cae9fd488e3077b08952093235bd626977 # 1.3.7
+        uses: umbrelladocs/action-linkspector@652f85bc57bb1e7d4327260decc10aa68f7694c3 # 1.4.0
         with:
           config_file: .github/linters/.linkspector.yml
 
@@ -168,14 +168,14 @@ jobs:
         id: linkspector-2
         if: steps.linkspector-1.outcome == 'failure'
         continue-on-error: true
-        uses: umbrelladocs/action-linkspector@874d01cae9fd488e3077b08952093235bd626977 # 1.3.7
+        uses: umbrelladocs/action-linkspector@652f85bc57bb1e7d4327260decc10aa68f7694c3 # 1.4.0
         with:
           config_file: .github/linters/.linkspector.yml
 
       - name: Validate Markdown Links (Attempt 3)
         id: linkspector-3
         if: steps.linkspector-2.outcome == 'failure'
-        uses: umbrelladocs/action-linkspector@874d01cae9fd488e3077b08952093235bd626977 # 1.3.7
+        uses: umbrelladocs/action-linkspector@652f85bc57bb1e7d4327260decc10aa68f7694c3 # 1.4.0
         with:
           config_file: .github/linters/.linkspector.yml
 
